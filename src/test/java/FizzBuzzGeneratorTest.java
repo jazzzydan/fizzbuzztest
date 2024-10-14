@@ -35,7 +35,4 @@ class FizzBuzzGeneratorTest {
         ArrayList<String> result = FizzBuzzGenerator.generateFizzBuzzArray(15);
         assertEquals(expected, result);
     }
-
-
-//    todo: for tsykli test, ilmselt tsyklist ka meetod, kus salvestab array
 }

@@ -6,13 +6,15 @@ public class FizzBuzzGenerator {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter last number of array");
-        int n = scanner.nextInt();
-//        todo: kontrolliks kas number sisestatud
 
 
-        ArrayList<String> fizzBuzzArray = generateFizzBuzzArray(n);
-        System.out.println(fizzBuzzArray);
-        scanner.close();
+        if (scanner.hasNextInt()) {
+            ArrayList<String> fizzBuzzArray = generateFizzBuzzArray(Integer.parseInt(scanner.nextLine()));
+            System.out.println(fizzBuzzArray);
+        } else {
+            System.out.println("Game over. It must be an integer!");
+        }
+
     }
 
     static ArrayList<String> generateFizzBuzzArray(int n) {
